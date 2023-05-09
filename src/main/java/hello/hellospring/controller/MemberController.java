@@ -27,7 +27,9 @@ public class MemberController {
     // 생성자로 di 주입 (권장)
     @Autowired
     public MemberController(MemberService memberService) {
+
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new") // 조회할때는 주로 get
